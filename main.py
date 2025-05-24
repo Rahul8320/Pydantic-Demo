@@ -1,5 +1,6 @@
-from typing import Dict
+from typing import Dict, List
 from models.booking import Booking
+from models.course import Course, Lesson, Module, Review
 from models.employee import Employee
 from models.product import Product
 from models.user import SignupDto, User
@@ -44,5 +45,30 @@ def main() -> None:
     print(Booking(**booking))  # type: ignore
 
 
+def run() -> None:
+    lessons: List[Lesson] = [
+        Lesson(id=1, topic="Why we need Pydantic?"),
+        Lesson(id=2, topic="Development Configuration"),
+    ]
+
+    modules: List[Module] = [Module(id=101, name="Introduction", lessons=lessons)]
+
+    reviews: List[Review] = [
+        Review(id=1, user_id=1, rating=8.5, comment="Great course!"),
+        Review(id=2, user_id=2, rating=9.0, comment="Really enjoyed it."),
+        Review(id=3, user_id=3, rating=5.5, comment="Good but could be better."),
+    ]
+
+    course = Course(
+        id=105763,
+        title="Pydantic Carse Course",
+        modules=modules,
+        price=199.00,
+        reviews=reviews,
+    )
+    print(course)
+
+
 if __name__ == "__main__":
-    main()
+    # main()
+    run()
