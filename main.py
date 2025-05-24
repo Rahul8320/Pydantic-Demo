@@ -1,4 +1,5 @@
 from typing import Dict
+from models.booking import Booking
 from models.employee import Employee
 from models.product import Product
 from models.user import SignupDto, User
@@ -30,6 +31,17 @@ def main() -> None:
         "quantity": 10,
     }
     print(Product(**product))  # type: ignore
+
+    booking: Dict[str, int | float | bool] = {
+        "id": 123,
+        "user_id": 324567,
+        "room_id": 101,
+        "nights": 2,
+        "rates_per_night": 3000,
+        "additional_service_amount": 2000,
+        "late_checkout": True,
+    }
+    print(Booking(**booking))  # type: ignore
 
 
 if __name__ == "__main__":
