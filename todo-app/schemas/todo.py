@@ -10,8 +10,8 @@ class CreateTodo(BaseModel):
 
 
 class UpdateTodo(BaseModel):
-    task: Optional[str] = Field(..., max_length=250)
-    completed: Optional[bool] = Field(default=False)
+    task: Optional[str] = Field(default=None, max_length=250)
+    completed: Optional[bool] = Field(default=None)
 
 
 class TodoDto(BaseModel):

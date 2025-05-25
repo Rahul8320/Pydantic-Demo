@@ -9,7 +9,7 @@ app = FastAPI()
 app.include_router(prefix="/api", router=todo_router)
 
 
-@app.get("/", status_code=HTTPStatus.OK)
+@app.get("/", status_code=HTTPStatus.OK, tags=["Health"])
 def health():
     response = ApiResponse(status=HTTPStatus.OK, message="Api is healthy")
     return response.model_dump(exclude_none=True)

@@ -15,3 +15,13 @@ POST {{BaseAddress}}/api/todos
 {
     "task": "Fast api todo app"
 }
+
+### PUT /api/todos/1
+PUT {{BaseAddress}}/api/todos/1
+
+{
+    "completed": true
+}
+
+### DELETE /api/todos/1
+DELETE {{BaseAddress}}/api/todos/1
