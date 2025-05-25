@@ -2,3 +2,16 @@
 
 ### GET /
 GET {{BaseAddress}}
+
+### GET /api/todos/
+GET {{BaseAddress}}/api/todos
+
+### GET /api/todos/1
+GET {{BaseAddress}}/api/todos/5
+
+### POST /api/todos
+POST {{BaseAddress}}/api/todos
+
+{
+    "task": "Fast api todo app"
+}
