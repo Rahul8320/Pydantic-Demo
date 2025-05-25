@@ -1,0 +1,13 @@
+@BaseAddress=http://localhost:8000
+
+### POST /signup
+POST {{BaseAddress}}/signup
+
+{
+    "username": "developer",
+    "email": "developer@coder.com",
+    "password": "DEV_123"
+}
+
+### GET /settings
+GET {{BaseAddress}}/settings
