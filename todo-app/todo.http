@@ -7,7 +7,7 @@ GET {{BaseAddress}}
 GET {{BaseAddress}}/api/todos
 
 ### GET /api/todos/1
-GET {{BaseAddress}}/api/todos/5
+GET {{BaseAddress}}/api/todos/1
 
 ### POST /api/todos
 POST {{BaseAddress}}/api/todos
